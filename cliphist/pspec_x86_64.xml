@@ -1,0 +1,45 @@
+<PISI>
+    <Source>
+        <Name>cliphist</Name>
+        <Homepage>https://github.com/sentriz/cliphist</Homepage>
+        <Packager>
+            <Name>DinimixisDEMZ</Name>
+            <Email>dinimixis@vivaldi.net</Email>
+        </Packager>
+        <License>GPL-3.0-only</License>
+        <PartOf>desktop.wayland</PartOf>
+        <Summary xml:lang="en">Wayland clipboard manager with support for multimedia</Summary>
+        <Description xml:lang="en">cliphist is a clipboard history manager for Wayland. It listens for
+clipboard changes and writes them to a history file using wl-clipboard.
+History can be recalled and piped into any picker (dmenu, rofi, fuzzel,
+wofi, etc.). Both text and images are supported, and clipboard content
+is preserved byte-for-byte, including leading/trailing whitespace and
+newlines.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>cliphist</Name>
+        <Summary xml:lang="en">Wayland clipboard manager with support for multimedia</Summary>
+        <Description xml:lang="en">cliphist is a clipboard history manager for Wayland. It listens for
+clipboard changes and writes them to a history file using wl-clipboard.
+History can be recalled and piped into any picker (dmenu, rofi, fuzzel,
+wofi, etc.). Both text and images are supported, and clipboard content
+is preserved byte-for-byte, including leading/trailing whitespace and
+newlines.
+</Description>
+        <PartOf>desktop.wayland</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/cliphist</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-03-12</Date>
+            <Version>0.7.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>DinimixisDEMZ</Name>
+            <Email>dinimixis@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>
