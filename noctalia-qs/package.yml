@@ -1,8 +1,8 @@
 name       : noctalia-qs
-version    : 0.0.8
-release    : 4
+version    : 0.0.9
+release    : 5
 source     :
-    - https://github.com/noctalia-dev/noctalia-qs/archive/refs/tags/v0.0.8.tar.gz : 5b5cd150ec5c194828d29cd72ea0004cb070fb93e79ff5edcef9567b145fa3ee
+    - https://github.com/noctalia-dev/noctalia-qs/archive/refs/tags/v0.0.9.tar.gz : fccbf3d7b723df62610e6ba7fd1922701b52f7345f699b6a04c9c86b40e60f55
 homepage   : https://github.com/noctalia-dev/noctalia-qs
 license    : LGPL-3.0-only
 component  : desktop.wayland
@@ -31,10 +31,9 @@ setup      : |
     %cmake_ninja -DCMAKE_BUILD_TYPE=Release \
                  -DUSE_JEMALLOC=ON \
                  -DDISTRIBUTOR="DinimixisDEMZ" \
-                 -DGIT_REVISION="v0.0.8" \
+                 -DGIT_REVISION="v0.0.9" \
                  -DCRASH_REPORTER=OFF
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    ln -sfv quickshell $installdir/usr/bin/qs
