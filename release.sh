@@ -1,34 +1,14 @@
 #!/bin/bash
 
 # Configuration of paths
-SOURCE="/home/build/work/"
+mkdir -p "$(pwd)/Noctalia-For-Solus/Releases"
 DEST="$(pwd)/Noctalia-For-Solus/Releases"
 
 TAG_NAME="Dini-$(date +%s)"
 RELEASE_NAME="DinimixisDEMZ-$(date +%s)"
 
-echo "Searching for packages in $SOURCE..."
-
-# Debug
-ls -l "$SOURCE"
-
-if [ -d "$SOURCE" ]; then
-
-    FILES=$(find "$SOURCE" -maxdepth 1 -name "*.eopkg")
-
-    if [ -n "$FILES" ]; then
-        mkdir -p "$DEST"
-        cp "$SOURCE"/*.eopkg "$DEST/"
-        echo "✅ Files copied to $DEST"
-        
-    else
-        echo "❌ No se encontraron archivos .eopkg en $SOURCE"
-        exit 1
-    fi
-else
-    echo "❌ Error: La ruta $SOURCE no existe en este entorno."
-    exit 1
-fi
+cp ./*.eopkg "$DEST/"
+echo "File copied to $DEST"
 
 PACKAGE_FILE="$(pwd)/Noctalia-For-Solus/Releases"/*.eopkg
 FILE_SIZE=$(du -h "$PACKAGE_FILE" | cut -f1)

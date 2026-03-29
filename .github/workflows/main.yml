@@ -36,6 +36,7 @@ jobs:
     - name: Build package
       shell: bash
       run: |
+        find . -name "*.eopkg" -type f -delete
         cd "$(pwd)/$PACKAGE"
         sudo solbuild build package.yml
 
