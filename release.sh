@@ -4,9 +4,6 @@
 mkdir -p "$(pwd)/Releases"
 DEST="$(pwd)/Releases"
 
-TAG_NAME="Dini-$(date +%s)"
-RELEASE_NAME="$PACKAGE-$(date +%s)"
-
 PACKAGE_PATH=$(find . -maxdepth 2 -name "*.eopkg" -print -quit)
 
 if [ -n "$PACKAGE_PATH" ]; then
