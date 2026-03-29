@@ -7,10 +7,13 @@ DEST="$(pwd)/Noctalia-For-Solus/Releases"
 TAG_NAME="Dini-$(date +%s)"
 RELEASE_NAME="DinimixisDEMZ-$(date +%s)"
 
-cp ./*.eopkg "$DEST/"
+cp "$(pwd)/Noctalia-For-Solus/$PACKAGE/"*.eopkg "$DEST/"
 echo "File copied to $DEST"
 
-PACKAGE_FILE="$(pwd)/Noctalia-For-Solus/Releases"/*.eopkg
+PACKAGE_FILE=$(basename "$(ls "$(pwd)/Noctalia-For-Solus/Releases/"*.eopkg)")
+echo "File detected: $PACKAGE_FILE"
+cd "$(pwd)/Noctalia-For-Solus/Releases/"
+
 FILE_SIZE=$(du -h "$PACKAGE_FILE" | cut -f1)
 MD5_SUM=$(md5sum "$PACKAGE_FILE" | awk '{print $1}')
 
